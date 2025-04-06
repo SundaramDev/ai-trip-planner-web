@@ -66,7 +66,7 @@ Deployment: Vercel
 
 📦 GitHub Repository: github.com/SundaramDev/ai-trip-planner-web
 
-📝 Project Report: (https://drive.google.com/file/d/1I7NglL9H8nDgzEn4sx6OKUA90J57reFn/view?usp=drivesdk)
+📝 Project Report: (https://drive.google.com/file/d/1IGihedXARFHXMvUij9dhFe5DZJAQqcW_/view?usp=drivesdk)
 📄 License
 This project is created for educational use under the Software Engineering course at IIIT Dharwad. All rights reserved to the respective authors for academic presentation purposes only.
 
