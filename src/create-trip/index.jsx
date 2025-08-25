@@ -120,15 +120,36 @@ function CreateTrip() {
                         What is your destination of choice?
                     </h2>
                     <GooglePlacesAutocomplete
-                        apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
-                        selectProps={{
-                            value: place,
-                            onChange: (v) => {
-                                setPlace(v);
-                                handleInputChange('location', v);
-                            },
-                        }}
-                    />
+  apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
+  selectProps={{
+    value: place,
+    onChange: (v) => {
+      setPlace(v);
+      handleInputChange("location", v);
+    },
+    styles: {
+      control: (provided) => ({
+        ...provided,
+        // backgroundColor: "#1e293b",   // background of input
+        color: "black",
+        borderRadius: "10px",
+        padding: "5px",
+      }),
+      menu: (provided) => ({
+        ...provided,
+        // backgroundColor: "#1e293b",   // background of dropdown
+        color: "black",
+      }),
+      option: (provided, state) => ({
+        ...provided,
+        // backgroundColor: state.isFocused ? "#334155" : "#1e293b",
+        color: "black",
+        padding: "10px",
+      }),
+    },
+  }}
+/>
+
                 </div>
             </div>
 

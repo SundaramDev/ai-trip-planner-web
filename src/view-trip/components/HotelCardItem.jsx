@@ -47,7 +47,7 @@ function HotelCardItem({ hotel }) {
             className="no-underline" // ✅ Removes default link styling
         >
             <div className='hover:scale-105 transition-all cursor-pointer'>
-                <img src={photoUrl || '/placeholder.jpg'} className='rounded-xl h-[180px] w-full object-cover'  /> {/* ✅ Fallback to placeholder */}
+                <img src={photoUrl || '/placeholder.jpg'} className='rounded-xl h-[180px] w-full object-cover' /> {/* ✅ Fallback to placeholder */}
                 <div className='my-2 gap-3'>
                     <h2 className='font-medium text-black'>{hotel.hotelName}</h2> {/* ✅ Ensures black text */}
                     <h2 className='text-xs text-gray-500'>📍 {hotel.hotelAddress}</h2>
