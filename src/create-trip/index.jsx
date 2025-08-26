@@ -119,36 +119,45 @@ function CreateTrip() {
                     <h2 className="text-xl my-3 font-medium">
                         What is your destination of choice?
                     </h2>
-                    <GooglePlacesAutocomplete
-  apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
-  selectProps={{
-    value: place,
-    onChange: (v) => {
-      setPlace(v);
-      handleInputChange("location", v);
-    },
-    styles: {
-      control: (provided) => ({
-        ...provided,
-        // backgroundColor: "#1e293b",   // background of input
-        color: "black",
-        borderRadius: "10px",
-        padding: "5px",
-      }),
-      menu: (provided) => ({
-        ...provided,
-        // backgroundColor: "#1e293b",   // background of dropdown
-        color: "black",
-      }),
-      option: (provided, state) => ({
-        ...provided,
-        // backgroundColor: state.isFocused ? "#334155" : "#1e293b",
-        color: "black",
-        padding: "10px",
-      }),
-    },
-  }}
-/>
+                  <GooglePlacesAutocomplete
+      apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
+      selectProps={{
+        value: place,
+        onChange: (v) => {
+          setPlace(v);
+          handleInputChange("location", v);
+        },
+        styles: {
+          control: (provided) => ({
+            ...provided,
+            color: "black",
+            borderRadius: "10px",
+            padding: "5px",
+            boxShadow: "none", // removes default shadow
+            border: "1px solid #ccc", // optional
+          }),
+          menu: (provided) => ({
+            ...provided,
+            color: "black",
+            backgroundColor: "white", // ensure dropdown bg is white
+            borderRadius: "10px",
+          }),
+          option: (provided, state) => ({
+            ...provided,
+            color: "black",
+            backgroundColor: state.isFocused
+              ? "rgba(0,0,0,0.05)" // subtle highlight instead of blue
+              : "white",
+            padding: "10px",
+          }),
+          singleValue: (provided) => ({
+            ...provided,
+            color: "black",
+          }),
+        },
+      }}
+    />
+  
 
                 </div>
             </div>
